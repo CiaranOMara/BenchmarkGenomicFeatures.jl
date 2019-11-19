@@ -31,6 +31,11 @@ end
 
 suite["collection"]["eachoverlap"][string(typeof(intervals_a)),string(typeof(intervals_b))] = @benchmarkable $collect(GenomicFeatures.eachoverlap($intervals_a, $intervals_b))
 
+col_a = IntervalCollection(intervals_a)
+col_b = IntervalCollection(intervals_b)
+
+suite["collection"]["eachoverlap"][string(typeof(col_a)),string(typeof(col_b))] = @benchmarkable $collect(GenomicFeatures.eachoverlap($col_a, $col_b))
+
 # If a cache of tuned parameters already exists, use it, otherwise, tune and cache the benchmark parameters.
 # Reusing cached parameters is faster and more reliable than re-tuning `suite` every time the file is included.
 paramspath = joinpath(dirname(@__FILE__), "params.json")
