@@ -44,18 +44,9 @@ end
 
 results = run(suite, verbose = true)
 
-show(results)
-
-@info "minimum"
-show(minimum(results))
-
-@info "median"
-show(median(results))
-
-@info "mean"
-show(mean(results))
-
-@info "maximum"
-show(maximum(results))
-
-show(results["collection"])
+@info "results"
+for (name, result) in results["collection"]["eachoverlap"]
+    print(name, " ")
+    display(result)
+    println()
+end

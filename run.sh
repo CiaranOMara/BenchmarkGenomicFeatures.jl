@@ -1,1 +1,1 @@
-julia --project=benchmark/ benchmark/benchmarks.jl
+julia --project=benchmark/ --color="yes" benchmark/benchmarks.jl
