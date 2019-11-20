@@ -1,6 +1,8 @@
 using Pkg
 
 Pkg.add(PackageSpec(url="https://github.com/BioJulia/GenomicFeatures.jl", rev="release/v2.0.0"))
+# Pkg.add(PackageSpec(path=joinpath(homedir(), "Projects", "GenomicFeatures.jl"), rev="release/v2.0.0"))
+
 Pkg.instantiate()
 
 using BenchmarkTools

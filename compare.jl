@@ -1,3 +1,7 @@
+using Pkg
+Pkg.activate(dirname(@__FILE__))
+Pkg.instantiate()
+
 using BSON: @save, @load
 using BenchmarkTools
 
