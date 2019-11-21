@@ -102,6 +102,19 @@ using BSON: @save, @load
 
 # @save joinpath(dirname(@__FILE__), "results-$(now()).bson") results
 @save joinpath(dirname(@__FILE__), "results.bson") results
+# @save joinpath(dirname(@__FILE__), "results-0f5f14ab.bson") results # Remove deprecation warnings
+# @save joinpath(dirname(@__FILE__), "results-09458d2e.bson") results # remove Remove superfluous types
+# @save joinpath(dirname(@__FILE__), "results-06a7c47e.bson") results # remove conversion
+# @save joinpath(dirname(@__FILE__), "results-20e63fe6.bson") results # Flatten compare_overlap
+# @save joinpath(dirname(@__FILE__), "results-464ec2f5.bson") results # Elucidate function return
+# @save joinpath(dirname(@__FILE__), "results-5ff1da89.bson") results # Flatten strand conversion
+# @save joinpath(dirname(@__FILE__), "results-fb8e364a.bson") results # Switch focus to eltype in overlap iterator
+# @save joinpath(dirname(@__FILE__), "results-38ef699e.bson") results # Rename types so that Sa and Sb may be used for iterator states
+# @save joinpath(dirname(@__FILE__), "results-1394d0cf.bson") results # Condense OverlapIteratorState outer constructors
+# @save joinpath(dirname(@__FILE__), "results-64336d55.bson") results # Use static types in subsequent OverlapIteratorState construction
+# @save joinpath(dirname(@__FILE__), "results-71ae347b.bson") results # Work towards explicit conversion on OverlapIteratorState construction
+
+
 
 @info "results"
 display(results)
